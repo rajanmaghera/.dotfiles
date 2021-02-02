@@ -8,7 +8,7 @@ Clone into `${HOME}/.dotfiles`
 
 ## nvim
 
-1. Install `neovim` via package manager.
+1. Install `neovim` and `node` via package manager.
 2. Install [`vim-plug`](https://github.com/junegunn/vim-plug).
 3. Alias `init.vim` to config folder.
 
@@ -16,7 +16,15 @@ Clone into `${HOME}/.dotfiles`
 ```
 mkdir "${HOME}"/.config/nvim
 
-ln -s "${HOME}"/init.vim "${HOME}"/config/nvim/init.vim
+ln -s "${HOME}"/.dotfiles/init.vim "${HOME}"/config/nvim/init.vim
 ```
 
-4. Run `:PlugInstall` in nvim
+4. Install plug-ins
+```
+:PlugInstall
+```
+
+5. Install coc extentions
+```
+:CocInstall coc-tsserver coc-json coc-html coc-css coc-pyright
+```
